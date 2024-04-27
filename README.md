@@ -1,5 +1,5 @@
 ## Table of Contents
-[1. Introduction to Machine Learning in Production](#1)\
+[1. Introduction to Machine Learning in Production](#1)<br>
 
 
 [2. Machine Learning Data Lifecycle in Production](#2)\
