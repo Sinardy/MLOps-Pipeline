@@ -1,5 +1,7 @@
 # Table of Contents
 
+[MLOps Pipeline](#mlops-pipeline) 
+
 1. [Introduction to Machine Learning in Production](#introduction-to-machine-learning-in-production)  
    1.1. [Overview of the ML Lifecycle and Deployment](#overview-of-the-ml-lifecycle-and-deployment)  
    1.2. [Select and Train a Model](#select-and-train-a-model)  
