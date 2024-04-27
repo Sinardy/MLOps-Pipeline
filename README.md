@@ -2,7 +2,7 @@
 
 [MLOps Pipeline](#mlops-pipeline) 
 
-1. [Introduction to Machine Learning in Production](#[introduction-to-machine-learning-in-production](https://github.com/Sinardy/MLOps-Pipeline/tree/main/1.%20Introduction%20to%20Machine%20Learning%20in%20Production))  
+1. [Introduction to Machine Learning in Production](https://github.com/Sinardy/MLOps-Pipeline/tree/main/1.%20Introduction%20to%20Machine%20Learning%20in%20Production)
    1.1. [Overview of the ML Lifecycle and Deployment](#overview-of-the-ml-lifecycle-and-deployment)  
    1.2. [Select and Train a Model](#select-and-train-a-model)  
    1.3. [Data Definition and Baseline](#data-definition-and-baseline)  
