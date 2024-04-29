@@ -1,1 +1,142 @@
 
+### Towards ML Engineering - History of TFX
+- **Read here:**
+  - [https://arxiv.org/abs/2010.02013](https://arxiv.org/abs/2010.02013)
+
+### Challenges in Deploying ML
+- **Read here:**
+  - [https://arxiv.org/abs/2011.09926](https://arxiv.org/abs/2011.09926)
+
+### Week 1: Neural Architecture Search
+- **Neural Architecture Search:**
+  - [Read here](https://arxiv.org/pdf/1808.05377.pdf)
+- **Bayesian Optimization:**
+  - [Read here](https://distill.pub/2020/bayesian-optimization/)
+- **Neural Architecture Search with Reinforcement Learning:**
+  - [Read here](https://arxiv.org/pdf/1611.01578.pdf)
+- **Progressive Neural Architecture Search:**
+  - [Read here](https://arxiv.org/pdf/1712.00559.pdf)
+- **Network Morphism:**
+  - [Read here](https://arxiv.org/abs/1603.01670)
+- **Amazon SageMaker Autopilot:**
+  - [Read here](https://aws.amazon.com/sagemaker/autopilot)
+- **Microsoft Azure Automated Machine Learning:**
+  - [Read here](https://azure.microsoft.com/en-in/services/machine-learning/automatedml/)
+- **Google Cloud AutoML:**
+  - [Read here](https://cloud.google.com/automl)
+
+# Week 2: Model Resource Management Techniques
+- **High dimensional spaces visualization:**
+  - [Read here](https://colab.research.google.com/drive/1GTBYAcMsiKDDQeDpyOIi_DGuPVleJAf0?usp=sharing)
+- **Word embeddings:**
+  - [Read here](https://heartbeat.fritz.ai/coreml-with-glove-word-embedding-and-recursive-neural-network-part-2-d72c1a66b028)
+- **Curse of dimensionality:**
+  - [Read here](https://builtin.com/data-science/curse-dimensionality)
+  - [Read here](https://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/)
+- **Sparsity:**
+  - [Read here](https://www.kdd.org/exploration_files/parsons.pdf)
+- **Feature engineering:**
+  - [Read here](https://quantdare.com/what-is-the-difference-between-feature-extraction-and-feature-selection/)
+  - [Read here](https://machinelearningmastery.com/discover-feature-engineering-how-to-engineer-features-and-how-to-get-good-at-it/)
+- **PCA:**
+  - [Read here](https://scikit-learn.org/stable/modules/decomposition.html)
+  - [Read here](https://www.coursera.org/lecture/machine-learning/principal-component-analysis-problem-formulation-GBFTt)
+  - [Read here](https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues/140579#140579)
+  - [Read here](https://elitedatascience.com/dimensionality-reduction-algorithms)
+- **ICA:**
+  - [Read here](https://scikit-learn.org/stable/modules/decomposition.html)
+  - [Read here](https://scikit-learn.org/stable/auto_examples/decomposition/plot_ica_vs_pca.html)
+- **NMF:**
+  - [Read here](https://scikit-learn.org/stable/modules/decomposition.html#non-negative-matrix-factorization-nmf-or-nnmf)
+- **Mobile model deployment:**
+  - [Google ML Kit](https://developers.google.com/ml-kit)
+  - [TensorFlow Lite](https://www.tensorflow.org/lite)
+- **Quantization:**
+  - [Read here](https://www.qualcomm.com/news/onq/2019/03/12/heres-why-quantization-matters-ai)
+  - [Read here](https://petewarden.com/2016/05/03/how-to-quantize-neural-networks-with-tensorflow/)
+  - [Read here](https://arxiv.org/abs/1712.05877)
+  - [Read here](https://blog.tensorflow.org/2020/04/quantization-aware-training-with-tensorflow-model-optimization-toolkit.html)
+  - [Read here](https://www.tensorflow.org/lite/performance/best_practices)
+- **Post-training quantization:**
+  - [Read here](https://medium.com/tensorflow/introducing-the-model-optimization-toolkit-for-tensorflow-254aca1ba0a3)
+- **Quantization aware training:**
+  - [Read here](https://blog.tensorflow.org/2020/04/quantization-aware-training-with-tensorflow-model-optimization-toolkit.html)
+- **Pruning:**
+  - [Read here](https://blog.tensorflow.org/2019/05/tf-model-optimization-toolkit-pruning-API.html)
+  - [Read here](http://yann.lecun.com/exdb/publis/pdf/lecun-90b.pdf)
+  - [Read here](https://towardsdatascience.com/can-you-remove-99-of-a-neural-network-without-losing-accuracy-915b1fab873b)
+  - [Read here](https://arxiv.org/abs/1803.03635)
+  - [Read here](https://numenta.com/blog/2019/08/30/case-for-sparsity-in-neural-networks-part-1-pruning)
+  - [Read here](https://www.tensorflow.org/model_optimization/guide/pruning)
+
+### Week 3: High Performance Modeling
+- **Distribution strategies:**
+  - [Read here](https://www.tensorflow.org/guide/distributed_training)
+- **Changes in data parallelism:**
+  - [Read here](https://arxiv.org/abs/1806.03377)
+- **Pipeline parallelism:**
+  - [Read here](https://ai.googleblog.com/2019/03/introducing-gpipe-open-source-library.html)
+- **GPipe:**
+  - [Read here](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py)
+  - [Read here](https://arxiv.org/abs/1811.06965)
+- **GoogleNet:**
+  - [Read here](https://arxiv.org/abs/1409.4842)
+- **Knowledge distillation:**
+  - [Read here](https://ai.googleblog.com/2018/05/custom-on-device-ml-models.html)
+  - [Read here](https://arxiv.org/pdf/1503.02531.pdf)
+  - [Read here](https://nervanasystems.github.io/distiller/knowledge_distillation.html)
+- **DistilBERT:**
+  - [Read here](https://blog.tensorflow.org/2020/05/how-hugging-face-achieved-2x-performance-boost-question-answering.html)
+- **Two-stage multi-teacher distillation for Q & A:**
+  - [Read here](https://arxiv.org/abs/1910.08381)
+- **EfficientNets:**
+  - [Read here](https://arxiv.org/abs/1911.04252)
+
+### Week 4: Model Performance Analysis
+- **TensorBoard:**
+  - [Read here](https://blog.tensorflow.org/2019/12/introducing-tensorboarddev-new-way-to.html)
+- **Model Introspection:**
+  - [Read here](https://www.kaggle.com/c/dogs-vs-cats/data)
+- **Optimization process:**
+  - [Read here](https://cs231n.github.io/neural-networks-3/)
+- **TFMA architecture:**
+  - [Read here](https://www.tensorflow.org/tfx/model_analysis/architecture)
+- **TFMA:**
+  - [Read here](https://blog.tensorflow.org/2018/03/introducing-tensorflow-model-analysis.html)
+- **Aggregate versus slice metrics:**
+  - [Read here](https://blog.tensorflow.org/2018/03/introducing-tensorflow-model-analysis.html)
+- **What-if tool:**
+  - [Read here](https://pair-code.github.io/what-if-tool/)
+  - [Watch here](https://www.youtube.com/playlist?list=PLIivdWyY5sqK7Z5A2-sftWLlbVSXuyclr)
+
+### Week 5: Explainability
+- **Fooling DNNs:**
+  - [Read here](https://arxiv.org/pdf/1607.02533.pdf)
+  - [Read here](https://arxiv.org/pdf/1412.6572.pdf)
+- **XAI:**
+  - [Read here](http://www.cs.columbia.edu/~orb/papers/xai_survey_paper_2017.pdf)
+- **Interpretable models:**
+  - [Read here](https://christophm.github.io/interpretable-ml-book/)
+  - [Read here](https://www.tensorflow.org/lattice)
+- **Dol bear law:**
+  - [Read here](https://en.wikipedia.org/wiki/Dolbear%27s_law)
+- **TensorFlow Lattice:**
+  - [Read here](https://www.tensorflow.org/lattice)
+  - [Read here](https://jmlr.org/papers/volume17/15-243/15-243.pdf)
+- **PDP:**
+  - [Read here](https://github.com/SauceCat/PDPbox)
+  - [Read here](https://scikit-learn.org/stable/auto_examples/inspection/plot_partial_dependence.html)
+- **Permutation Feature Importance:**
+  - [Read here](http://arxiv.org/abs/1801.01489)
+- **Shapley values:**
+  - [Read here](https://en.wikipedia.org/wiki/Shapley_value)
+- **SHAP:**
+  - [Read here](https://github.com/slundberg/shap)
+- **TCAV:**
+  - [Read here](https://arxiv.org/pdf/1711.11279.pdf)
+- **LIME:**
+  - [Read here](https://github.com/marcotcr/lime)
+- **Google Cloud XAI:**
+  - [Read here](https://storage.googleapis.com/cloud-ai-whitepapers/AI%20Explainability%20Whitepaper.pdf)
+- **Integrated gradients:**
+  - [Read here](https://arxiv.org/pdf/1703.01365.pdf)
