@@ -25,7 +25,7 @@
 - **Google Cloud AutoML:**
   - [Read here](https://cloud.google.com/automl)
 
-# Week 2: Model Resource Management Techniques
+### Week 2: Model Resource Management Techniques
 - **High dimensional spaces visualization:**
   - [Read here](https://colab.research.google.com/drive/1GTBYAcMsiKDDQeDpyOIi_DGuPVleJAf0?usp=sharing)
 - **Word embeddings:**
