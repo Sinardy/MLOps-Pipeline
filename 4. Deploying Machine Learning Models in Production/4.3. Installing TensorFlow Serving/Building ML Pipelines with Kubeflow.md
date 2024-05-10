@@ -39,20 +39,5 @@ You can send the command ``` kubectl get deploy -n kubeflow ``` a few times to c
 
 Output will look like this 
 
-```
-NAME                              READY   UP-TO-DATE   AVAILABLE   AGE
-cache-deployer-deployment         1/1     1            1           4d
-cache-server                      1/1     1            1           4d
-metadata-envoy-deployment         1/1     1            1           4d
-metadata-grpc-deployment          1/1     1            1           4d
-metadata-writer                   1/1     1            1           4d
-minio                             1/1     1            1           4d
-ml-pipeline                       1/1     1            1           4d
-ml-pipeline-persistenceagent      1/1     1            1           4d
-ml-pipeline-scheduledworkflow     1/1     1            1           4d
-ml-pipeline-ui                    1/1     1            1           4d
-ml-pipeline-viewer-crd            1/1     1            1           4d
-ml-pipeline-visualizationserver   1/1     1            1           4d
-mysql                             1/1     1            1           4d
-workflow-controller               1/1     1            1           4d
-```
+![Pipeline Pods](../assets/Pipeline-pods.png)
+
