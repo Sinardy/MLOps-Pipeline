@@ -25,3 +25,5 @@
    4.2. [Model Serving: Patterns and Infrastructure](#model-serving-patterns-and-infrastructure)  
    4.3. [Model Management and Delivery](#model-management-and-delivery)  
    4.4. [Model Monitoring and Logging](#model-monitoring-and-logging)  
+
+4. [Development with JupyterLab and Docker](#development-with-JupyterLab-and-Docker)  
