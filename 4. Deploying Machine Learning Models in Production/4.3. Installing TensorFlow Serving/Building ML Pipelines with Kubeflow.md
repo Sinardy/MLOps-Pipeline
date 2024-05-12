@@ -1,15 +1,21 @@
-### 1. Install Docker
+## Step 1. Install Docker
 
 To install Docker, follow the instructions provided in the [official Docker documentation](https://docs.docker.com/get-docker/).
 
-### 2. Install Installing Kind (Kubernetes in Docker) 
+## Step 2. Install Installing Kind (Kubernetes in Docker) 
 kind is a tool for running local Kubernetes clusters using Docker container “nodes”.
 kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
 
 For detailed installation instructions and troubleshooting, refer to the [official Kind documentation](https://kind.sigs.k8s.io/docs/user/quick-start#installation).
 
+For Mac users like myself, the following command installs 'kind' using Homebrew:
 
-### 3. Create Kubernetes cluster using Docker containers
+```
+brew install kind
+```
+
+
+## Step 3. Create Kubernetes cluster using Docker containers
 
 When you run kind create cluster, Kind performs the following steps:
 
@@ -42,6 +48,7 @@ kubectl cluster-info --context kind-kind
 
 Have a nice day! 👋
 ```
+
 ```
 % kubectl cluster-info --context kind-kind
 Kubernetes control plane is running at https://127.0.0.1:49461
@@ -51,7 +58,7 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ```
 
 
-### 4. Deploy Kubeflow Pipelines
+## Step 4. Deploy Kubeflow Pipelines
 
 You can enter the commands above one line at a time. These will setup all the deployments and spin up the pods for the entire application. These will be found in the kubeflow namespace. After sending the last command, it will take a moment (around 30 minutes) for all the deployments to be ready. 
 
@@ -163,12 +170,42 @@ deployment.apps/workflow-controller created
 ```
 
 You can send the command ` kubectl get deploy -n kubeflow ` a few times to check the status. You should see all deployments with the READY status before you can proceed to the next section.
+
 ```
 kubectl get deploy -n kubeflow
 ```
 
 
-Output will look like this 
-
+Output will look like this:
+```
+NAME                              READY   UP-TO-DATE   AVAILABLE   AGE
+cache-deployer-deployment         1/1     1            1           2d
+cache-server                      1/1     1            1           2d
+metadata-envoy-deployment         1/1     1            1           2d
+metadata-grpc-deployment          1/1     1            1           2d
+metadata-writer                   1/1     1            1           2d
+minio                             1/1     1            1           2d
+ml-pipeline                       1/1     1            1           2d
+ml-pipeline-persistenceagent      1/1     1            1           2d
+ml-pipeline-scheduledworkflow     1/1     1            1           2d
+ml-pipeline-ui                    1/1     1            1           2d
+ml-pipeline-viewer-crd            1/1     1            1           2d
+ml-pipeline-visualizationserver   1/1     1            1           2d
+mysql                             1/1     1            1           2d
+workflow-controller               1/1     1            1           2d
+```
 ![Pipeline Pods](../assets/Pipeline-pods.png)
 
+
+## Step 5. Port-Forward the service port 80 to 8080
+
+use kubectl to direct traffic from port 80 of the ml-pipeline-ui service to port 8080 on the host."
+
+```
+kubectl port-forward -n kubeflow svc/ml-pipeline-ui 8080:80
+```
+## Step 6. Access ML Pipeline
+
+```
+localhost:8080
+```
