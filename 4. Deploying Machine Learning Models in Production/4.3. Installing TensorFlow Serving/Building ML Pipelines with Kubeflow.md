@@ -194,8 +194,6 @@ ml-pipeline-visualizationserver   1/1     1            1           2d
 mysql                             1/1     1            1           2d
 workflow-controller               1/1     1            1           2d
 ```
-![Pipeline Pods](../assets/Pipeline-pods.png)
-
 
 ## Step 5. Port-Forward the service port 80 to 8080
 
