@@ -28,7 +28,20 @@ When you run kind create cluster, Kind performs the following steps:
 To create a Kubernetes cluster using Kind, execute the following command:
 
 ```
-kind create cluster
+cat <<EOF | kind create cluster --name=kubeflow  --kubeconfig mycluster.yaml --config=-
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+  image: kindest/node:v1.29.4
+  kubeadmConfigPatches:
+  - |
+    kind: ClusterConfiguration
+    apiServer:
+      extraArgs:
+        "service-account-issuer": "kubernetes.default.svc"
+        "service-account-signing-key-file": "/etc/kubernetes/pki/sa.key"
+EOF
 ```
 
 Output look like this 
