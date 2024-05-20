@@ -161,13 +161,12 @@ application.app.k8s.io/pipeline created
 You can send the command ` kubectl get deploy -n kubeflow ` a few times to check the status. You should see all deployments with the READY status before you can proceed to the next section.
 
 ```
-kubectl get deploy -n kubeflow
+kubectl get deployments -A
 ```
 
 
 Output will look like this:
 ```
-kubectl get deployments -A
 NAMESPACE            NAME                              READY   UP-TO-DATE   AVAILABLE   AGE
 kube-system          coredns                           2/2     2            2           21m
 kubeflow             cache-deployer-deployment         1/1     1            1           18m
