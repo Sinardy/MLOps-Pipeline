@@ -28,46 +28,23 @@ When you run kind create cluster, Kind performs the following steps:
 To create a Kubernetes cluster using Kind, execute the following command:
 
 ```
-cat <<EOF | kind create cluster --name=kubeflow  --kubeconfig mycluster.yaml --config=-
-kind: Cluster
-apiVersion: kind.x-k8s.io/v1alpha4
-nodes:
-- role: control-plane
-  image: kindest/node:v1.29.4
-  kubeadmConfigPatches:
-  - |
-    kind: ClusterConfiguration
-    apiServer:
-      extraArgs:
-        "service-account-issuer": "kubernetes.default.svc"
-        "service-account-signing-key-file": "/etc/kubernetes/pki/sa.key"
-EOF
+kind create cluster --name=kubeflow 
 ```
 
 Output look like this 
 ```
 % kind create cluster
-Creating cluster "kind" ...
- ✓ Ensuring node image (kindest/node:v1.29.2) 🖼 
- ✓ Preparing nodes 📦  
- ✓ Writing configuration 📜 
- ✓ Starting control-plane 🕹️ 
- ✓ Installing CNI 🔌 
- ✓ Installing StorageClass 💾 
-Set kubectl context to "kind-kind"
+Creating cluster "kubeflow" ...
+ ✓ Ensuring node image (kindest/node:v1.30.0) 🖼
+ ✓ Preparing nodes 📦
+ ✓ Writing configuration 📜
+ ✓ Starting control-plane 🕹️
+ ✓ Installing CNI 🔌
+ ✓ Installing StorageClass 💾
+Set kubectl context to "kind-kubeflow"
 You can now use your cluster with:
 
-kubectl cluster-info --context kind-kind
-
-Have a nice day! 👋
-```
-
-```
-% kubectl cluster-info --context kind-kind
-Kubernetes control plane is running at https://127.0.0.1:49461
-CoreDNS is running at https://127.0.0.1:49461/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-
-To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+kubectl cluster-info --context kind-kubeflow
 ```
 
 
@@ -190,24 +167,24 @@ kubectl get deploy -n kubeflow
 
 Output will look like this:
 ```
-% kubectl get pods -n kubeflow
-NAME                                              READY   STATUS             RESTARTS        AGE
-cache-deployer-deployment-65fb47dd94-rwsdd        1/1     Running            0               7m57s
-cache-server-657b5f8474-47hdr                     1/1     Running            0               7m57s
-controller-manager-566cbcbc45-7nfsr               1/1     Running            0               7m57s
-metadata-envoy-deployment-758c78ccb9-h49hw        1/1     Running            0               7m57s
-metadata-grpc-deployment-68d6f447cc-whv9q         1/1     Running            2 (7m55s ago)   7m57s
-metadata-writer-6bf88bb8c4-78c4x                  1/1     Running            0               7m57s
-minio-59b68688b5-zk74h                            1/1     Running            0               7m57s
-ml-pipeline-6fd7df65fd-62rzl                      1/1     Running            0               7m57s
-ml-pipeline-persistenceagent-6f86458589-c5zdl     1/1     Running            0               7m56s
-ml-pipeline-scheduledworkflow-6d47f64655-95brr    1/1     Running            0               7m56s
-ml-pipeline-ui-59864db569-cfq2j                   1/1     Running            0               7m56s
-ml-pipeline-viewer-crd-c84f488f8-kzqt2            1/1     Running            0               7m56s
-ml-pipeline-visualizationserver-b688864fb-vs8jv   1/1     Running            0               7m55s
-mysql-5f8cbd6df7-lm6g5                            1/1     Running            0               7m55s
-proxy-agent-754f555d7c-4whhw                      0/1     CrashLoopBackOff   6 (2m22s ago)   7m55s   <-- known issue
-workflow-controller-7b46c9c84f-5448x              1/1     Running            0               7m55s
+kubectl get deployments -A
+NAMESPACE            NAME                              READY   UP-TO-DATE   AVAILABLE   AGE
+kube-system          coredns                           2/2     2            2           21m
+kubeflow             cache-deployer-deployment         1/1     1            1           18m
+kubeflow             cache-server                      1/1     1            1           18m
+kubeflow             metadata-envoy-deployment         1/1     1            1           18m
+kubeflow             metadata-grpc-deployment          1/1     1            1           18m
+kubeflow             metadata-writer                   1/1     1            1           18m
+kubeflow             minio                             1/1     1            1           18m
+kubeflow             ml-pipeline                       1/1     1            1           18m
+kubeflow             ml-pipeline-persistenceagent      1/1     1            1           18m
+kubeflow             ml-pipeline-scheduledworkflow     1/1     1            1           18m
+kubeflow             ml-pipeline-ui                    1/1     1            1           18m
+kubeflow             ml-pipeline-viewer-crd            1/1     1            1           18m
+kubeflow             ml-pipeline-visualizationserver   1/1     1            1           18m
+kubeflow             mysql                             1/1     1            1           18m
+kubeflow             workflow-controller               1/1     1            1           18m
+local-path-storage   local-path-provisioner            1/1     1            1           21m
 ```
 
 ## Step 5. Port-Forward the service port 80 to 8080
